@@ -1,0 +1,20 @@
+# Virtual environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# FAISS index
+dedup.index
+
+# Temporary and cache folders
+logs/
+qa_review/temp/
+rendering/temp/
+storage/temp/
+publish/temp/
+
+# Documentation workspace temp
+documentation _hub/temp/
