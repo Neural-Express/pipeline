@@ -1,0 +1,13 @@
+# Execution Methodology (Agile)
+
+We recommend using an **Agile Scrum** approach, which is ideal for complex software projects with evolving requirements[creately.com](https://creately.com/blog/project-management/what-is-scrum-methodology-scrum-process/#:~:text=Scrum%20is%20an%20agile%20project,4%20week%20sprints). This involves:
+
+1. **Sprint Planning & Backlog:** Define the project scope by user stories (e.g. “As a subscriber, I want a weekly summary of AI news so that I stay informed.”). Prioritize core features (data fetching, dedupe, summarization) for early sprints.
+2. **Short Iterations (2-4 weeks):** Work in sprints focusing on deliverables. Scrum typically uses 2-week sprints, but 3-4 weeks can work for smaller teams[creately.com](https://creately.com/blog/project-management/what-is-scrum-methodology-scrum-process/#:~:text=Scrum%20is%20an%20agile%20project,4%20week%20sprints). Each sprint aims to produce a potentially shippable increment (e.g., after Sprint 2 you have basic ArXiv and Twitter fetchers working).
+3. **Daily Stand-ups:** Short daily meetings to sync up, remove roadblocks, and adjust plans.
+4. **Sprint Review & Demo:** At end of each sprint, review completed features. Show the working newsletter pipeline (even if minimal) to stakeholders for feedback.
+5. **Retrospective:** Discuss what went well and what can improve next sprint. Continually refine the process.
+
+This iterative process ensures we can adapt (e.g. add a new data source or tweak the summary prompt) without derailing the project. By regularly integrating and testing (Continuous Integration), we catch issues early[about.gitlab.com](https://about.gitlab.com/topics/ci-cd/continuous-integration-best-practices/#:~:text=CI%20best%20practice%3A%20Commit%20early%2C,commit%20often). Agile also aligns with MVP principles: initially build a minimal working product, then expand features based on user feedback. According to industry benchmarks, an MVP with advanced features like machine learning usually takes **3–6 months** to develop[cyces.co](https://cyces.co/blog/mvp-ideal-timeline#:~:text=Three%20to%20six%20months%3A), which matches a plan of 6–8 sprints for our scope.
+
+Alternative methodologies (e.g. Kanban or Waterfall) could work, but Scrum’s focus on short cycles and continuous delivery is a good match for iterating on AI components and newsletter content. In each sprint, we should incorporate tasks for not just coding, but also testing (see below) and design discussions for upcoming features (e.g. A/B testing newsletter subjects).
