@@ -1,28 +1,8 @@
-# Core HTTP and parsing libraries
+jinja2
+python-dotenv
 requests
 beautifulsoup4
-feedparser
-
-# arXiv access
-arxiv
-
-# Reddit API wrapper
-praw
-
-# Twitter/X API wrapper
-tweepy
-
-# Environment variable management
-python-dotenv
-
-sentence-transformers
-faiss
-ollama
-Jinja2
-notion-client
-mailchimp-marketing
-sentry-sdk
-pytest
-flake8
-
-python-dateutil
+pillow
+# If you plan to run summarization on this machine, then also install:
+# transformers==4.41.2
+# torch  # follow PyTorch’s Mac install page if you add this
