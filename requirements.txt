@@ -17,3 +17,5 @@ scipy
 faiss-cpu
 scikit-learn
 scipy
+scikit-learn
+scipy
