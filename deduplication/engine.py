@@ -111,3 +111,13 @@ if __name__ == "__main__":
     with open(OUT_UNIQUE, "w", encoding="utf-8") as outf:
         json.dump(unique_articles, outf, ensure_ascii=False, indent=2)
     print(f"[SAVE] {len(unique_articles)} unique articles written to '{OUT_UNIQUE}'.")
+
+
+# After dedup writes deduplication/unique_articles.json:
+from pipeline.contracts.checks import load_json_array, ensure_article_fields, ensure_min_count
+
+DEDUP_OUT = "deduplication/unique_articles.json"
+items = load_json_array(DEDUP_OUT)
+ensure_article_fields(items, ["title","url","published_date","source_platform","content"])
+ensure_min_count(items, 5, DEDUP_OUT)  # adjust threshold
+print("[CONTRACT] Deduplication output OK.")

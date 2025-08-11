@@ -1,0 +1,10 @@
+[
+  {
+    "title": "OpenAI ships Foo",
+    "url": "https://site/article",
+    "published_date": "2025-08-08T09:15:00+00:00",
+    "source_platform": "The Verge",
+    "text": "Optional: full/partial article text",
+    "image": "Optional image url"
+  }
+]

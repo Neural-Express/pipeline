@@ -1,0 +1,95 @@
+name: Weekly AI Newsletter (Full Auto)
+
+on:
+  workflow_dispatch:          # allow manual runs from the Actions tab
+  schedule:
+    - cron: "0 6 * * 1"       # every Monday 06:00 UTC — change as you like
+
+jobs:
+  build-and-send:
+    runs-on: ubuntu-latest
+
+    env:
+      # Make HF downloads + pip caches reusable between runs
+      HF_HOME: ~/.cache/huggingface
+      TRANSFORMERS_CACHE: ~/.cache/huggingface/transformers
+      TORCH_HOME: ~/.cache/torch
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: pip-${{ runner.os }}-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            pip-${{ runner.os }}-
+
+      - name: Cache Hugging Face & Torch
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/huggingface
+            ~/.cache/torch
+          key: hf-${{ runner.os }}-${{ hashFiles('summarization/**', 'requirements.txt') }}
+          restore-keys: |
+            hf-${{ runner.os }}-
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          # summarization needs these (CPU wheels to keep it light on runners):
+          pip install "transformers==4.41.2"
+          pip install --extra-index-url https://download.pytorch.org/whl/cpu "torch>=2.3,<2.6"
+
+      # ---- 1) INGESTION (adjust the script name if yours differs) ----
+      - name: Data ingestion
+        run: |
+          if [ -f "data_ingestion/engine.py" ]; then
+            python data_ingestion/engine.py
+          else
+            echo "⚠️ data_ingestion/engine.py not found — skipping ingestion step"
+          fi
+
+      # ---- 2) DEDUPLICATION ----
+      - name: Deduplication
+        run: python deduplication/engine.py
+
+      # ---- 3) SUMMARIZATION ----
+      - name: Summarization
+        run: python summarization/engine.py
+
+      # ---- 4) BUILD NEWSLETTER HTML ----
+      - name: Build newsletter
+        run: python rendering/build_newsletter.py
+
+      # Save outputs as build artifacts (optional but handy)
+      - name: Upload newsletter artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: newsletter-build
+          path: |
+            rendering/newsletter.html
+            rendering/newsletter_fragment.html
+            summarization/summaries.json
+
+      # ---- 5) SEND EMAIL (Hostinger SMTP) ----
+      - name: Email to subscribers
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          SENDER_NAME: ${{ secrets.SENDER_NAME }}
+          SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+          # Optional: override logo in CI (leave blank to use repo logo)
+          NEWSLETTER_LOGO: ${{ secrets.NEWSLETTER_LOGO }}
+        run: python publish/send_email.py send

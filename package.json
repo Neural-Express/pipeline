@@ -1,0 +1,23 @@
+{
+  "name": "pipeline",
+  "version": "1.0.0",
+  "description": "> An end-to-end automated pipeline to ingest, deduplicate, summarize, and publish weekly AI news content—scalable, reliable, and powered by LLMs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Neural-Express/pipeline.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Neural-Express/pipeline/issues"
+  },
+  "homepage": "https://github.com/Neural-Express/pipeline#readme",
+  "devDependencies": {
+    "mjml": "^4.15.3"
+  }
+}
