@@ -15,3 +15,5 @@ sentence-transformers
 scikit-learn
 scipy
 faiss-cpu
+scikit-learn
+scipy
