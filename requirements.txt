@@ -1,18 +1,13 @@
-jinja2
-python-dotenv
-requests
-beautifulsoup4
-pillow
-arxiv
-charset-normalizer
-# If you plan to run summarization on this machine, then also install:
-# transformers==4.41.2
-# torch  # follow PyTorch’s Mac install page if you add this
-echo "praw
+Jinja2
 feedparser
 beautifulsoup4
 requests
 python-dateutil
-tweepy
 python-dotenv
-arxiv" >> requirements.txt
+tweepy
+praw
+sumy
+rake-nltk
+yake
+newspaper3k
+arxiv
