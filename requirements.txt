@@ -11,3 +11,6 @@ rake-nltk
 yake
 newspaper3k
 arxiv
+sentence-transformers
+scikit-learn
+scipy

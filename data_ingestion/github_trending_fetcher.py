@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime, timezone
-from utils import standardize_article
+from .utils import standardize_article
 import logging
 
 logger = logging.getLogger(__name__)

@@ -1,10 +1,7 @@
 # data_ingestion/engine.py
-try:
-    # works when run as module: python -m data_ingestion.engine
-    from .main import run
-except ImportError:
-    # works when run as script: python data_ingestion/engine.py
-    from data_ingestion.main import run
+# Executes data_ingestion.main whether run as a module or script.
+
+import runpy
 
 if __name__ == "__main__":
-    run()
+    runpy.run_module("data_ingestion.main", run_name="__main__")

@@ -1,11 +1,11 @@
-from arxiv_fetcher import fetch_arxiv_papers
-from reddit_fetcher import fetch_reddit_posts
-from twitter_fetcher import fetch_twitter_posts
-from github_trending_fetcher import fetch_github_trending
-from rss_fetcher import fetch_rss_feeds
-from newsapi_fetcher import fetch_news_ai_articles
-from newsdata_fetcher import fetch_newsdata
-from webzio_fetcher import fetch_webzio
+from .arxiv_fetcher import fetch_arxiv_papers
+from .reddit_fetcher import fetch_reddit_posts
+from .twitter_fetcher import fetch_twitter_posts
+from .github_trending_fetcher import fetch_github_trending
+from .rss_fetcher import fetch_rss_feeds
+from .newsapi_fetcher import fetch_news_ai_articles
+from .newsdata_fetcher import fetch_newsdata
+from .webzio_fetcher import fetch_webzio
 from datetime import datetime
 import json
 import os

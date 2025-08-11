@@ -1,7 +1,7 @@
 import feedparser
 from datetime import datetime, timezone
 import time
-from utils import standardize_article
+from .utils import standardize_article
 import logging
 
 logger = logging.getLogger(__name__)

@@ -51,10 +51,10 @@ jobs:
           pip install --extra-index-url https://download.pytorch.org/whl/cpu "torch>=2.3,<2.6"
 
       # ---- 1) INGESTION (adjust the script name if yours differs) ----
-      - name: Data ingestion
+      - name: data_ingestion
         run: |
           if [ -f "data_ingestion/engine.py" ]; then
-            python data_ingestion/engine.py
+            python -m data_ingestion.engine
           else
             echo "⚠️ data_ingestion/engine.py not found — skipping ingestion step"
           fi

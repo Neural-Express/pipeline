@@ -114,7 +114,7 @@ if __name__ == "__main__":
 
 
 # After dedup writes deduplication/unique_articles.json:
-from pipeline.contracts.checks import load_json_array, ensure_article_fields, ensure_min_count
+from contracts.checks import load_json_array, ensure_article_fields, ensure_min_count
 
 DEDUP_OUT = "deduplication/unique_articles.json"
 items = load_json_array(DEDUP_OUT)

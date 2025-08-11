@@ -1,0 +1,261 @@
+[
+  {
+    "title": "Effective Training Data Synthesis for Improving MLLM Chart Understanding",
+    "url": "http://arxiv.org/abs/2508.06492v1",
+    "content": "Being able to effectively read scientific plots, or chart understanding, is a\ncentral part toward building effective agents for science. However, existing\nmultimodal large language models (MLLMs), especially open-source ones, are\nstill falling behind with a typical success rate of 30%-50% on challenging\nbenchmarks. Previous studies on fine-tuning MLLMs with synthetic charts are\noften restricted by their inadequate similarity to the real charts, which could\ncompromise model training and performance on complex real-world charts. In this\nstudy, we show that modularizing chart generation and diversifying visual\ndetails improves chart understanding capabilities. In particular, we design a\nfive-step data synthesis pipeline, where we separate data and function creation\nfor single plot generation, condition the generation of later subplots on\nearlier ones for multi-subplot figures, visually diversify the generated\nfigures, filter out low quality data, and finally generate the question-answer\n(QA) pairs with GPT-4o. This approach allows us to streamline the generation of\nfine-tuning datasets and introduce the effective chart dataset (ECD), which\ncontains 10k+ chart images and 300k+ QA pairs, covering 25 topics and featuring\n250+ chart type combinations with high visual complexity. We show that ECD\nconsistently improves the performance of various MLLMs on a range of real-world\nand synthetic test sets. Code, data and models are available at:\nhttps://github.com/yuweiyang-anu/ECD.",
+    "published_date": "2025-08-08T17:59:10+00:00",
+    "source_platform": "arXiv"
+  },
+  {
+    "title": "Computational Methods and Verification Theorem for Portfolio-Consumption Optimization under Exponential O-U Dynamics",
+    "url": "http://arxiv.org/abs/2508.06491v1",
+    "content": "In this paper, we focus on the problem of optimal portfolio-consumption\npolicies in a multi-asset financial market, where the n risky assets follow\nExponential Ornstein-Uhlenbeck processes, along with one risk-free bond. The\ninvestor's preferences are modeled using Constant Relative Risk Aversion\nutility with state-dependent stochastic discounting. The problem can be\nformulated as a high-dimensional stochastic optimal control problem, wherein\nthe associated value function satisfies a Hamilton-Jacobi-Bellman (HJB)\nequation, which constitutes a necessary condition for optimality. We apply a\nvariable separation technique to transform the HJB equation to a system of\nordinary differential equations (ODEs). Then a class of hybrid numerical\napproaches that integrate exponential Rosenbrock-type methods with Runge-Kutta\nmethods is proposed to solve the ODE system. More importantly, we establish a\nrigorous verification theorem that provides sufficient conditions for the\nexistence of value function and admissible optimal control, which can be\nverified numerically. A series of experiments are performed, demonstrating that\nour proposed method outperforms the conventional grid-based method in both\naccuracy and computational cost. Furthermore, the numerically derived optimal\npolicy achieves superior performance over all other considered admissible\npolicies.",
+    "published_date": "2025-08-08T17:58:54+00:00",
+    "source_platform": "arXiv"
+  },
+  {
+    "title": "Multivariate Fields of Experts",
+    "url": "http://arxiv.org/abs/2508.06490v1",
+    "content": "We introduce the multivariate fields of experts, a new framework for the\nlearning of image priors. Our model generalizes existing fields of experts\nmethods by incorporating multivariate potential functions constructed via\nMoreau envelopes of the $\\ell_\\infty$-norm. We demonstrate the effectiveness of\nour proposal across a range of inverse problems that include image denoising,\ndeblurring, compressed-sensing magnetic-resonance imaging, and computed\ntomography. The proposed approach outperforms comparable univariate models and\nachieves performance close to that of deep-learning-based regularizers while\nbeing significantly faster, requiring fewer parameters, and being trained on\nsubstantially fewer data. In addition, our model retains a relatively high\nlevel of interpretability due to its structured design.",
+    "published_date": "2025-08-08T17:58:25+00:00",
+    "source_platform": "arXiv"
+  },
+  {
+    "title": "Voting-Based Semi-Parallel Proof-of-Work Protocol",
+    "url": "http://arxiv.org/abs/2508.06489v1",
+    "content": "Parallel Proof-of-Work (PoW) protocols are suggested to improve the safety\nguarantees, transaction throughput and confirmation latencies of Nakamoto\nconsensus. In this work, we first consider the existing parallel PoW protocols\nand develop hard-coded incentive attack structures. Our theoretical results and\nsimulations show that the existing parallel PoW protocols are more vulnerable\nto incentive attacks than the Nakamoto consensus, e.g., attacks have smaller\nprofitability threshold and they result in higher relative rewards. Next, we\nintroduce a voting-based semi-parallel PoW protocol that outperforms both\nNakamoto consensus and the existing parallel PoW protocols from most practical\nperspectives such as communication overheads, throughput, transaction\nconflicts, incentive compatibility of the protocol as well as a fair\ndistribution of transaction fees among the voters and the leaders. We use\nstate-of-the-art analysis to evaluate the consistency of the protocol and\nconsider Markov decision process (MDP) models to substantiate our claims about\nthe resilience of our protocol against incentive attacks.",
+    "published_date": "2025-08-08T17:57:35+00:00",
+    "source_platform": "arXiv"
+  },
+  {
+    "title": "Weak approximation of stochastic differential equations with sticky boundary conditions",
+    "url": "http://arxiv.org/abs/2508.06487v1",
+    "content": "Sticky diffusion models a Markovian particle experiencing reflection and\ntemporary adhesion phenomena at the boundary. Numerous numerical schemes exist\nfor approximating stopped or reflected stochastic differential equations\n(SDEs), but this is not the case for sticky SDEs. In this paper, we construct\nand analyze half-order and first-order numerical schemes for the weak\napproximation of stochastic differential equations with sticky boundary\nconditions. We present the algorithms in general setting such that they can be\nused to solve general linear parabolic partial differential equations with\nsecond-order sticky boundary condition via the probabilistic representations of\ntheir solutions. Since the sticky diffusion spends non-zero amount of time on\nboundary, it poses extra challenge in designing the schemes and obtaining their\norder of convergence. We support the theoretical results with numerical\nexperiments.",
+    "published_date": "2025-08-08T17:50:18+00:00",
+    "source_platform": "arXiv"
+  },
+  {
+    "title": "Does block size matter in randomized block Krylov low-rank approximation?",
+    "url": "http://arxiv.org/abs/2508.06486v1",
+    "content": "We study the problem of computing a rank-$k$ approximation of a matrix using\nrandomized block Krylov iteration. Prior work has shown that, for block size $b\n= 1$ or $b = k$, a $(1 + \\varepsilon)$-factor approximation to the best\nrank-$k$ approximation can be obtained after $\\tilde O(k/\\sqrt{\\varepsilon})$\nmatrix-vector products with the target matrix. On the other hand, when $b$ is\nbetween $1$ and $k$, the best known bound on the number of matrix-vector\nproducts scales with $b(k-b)$, which could be as large as $O(k^2)$.\nNevertheless, in practice, the performance of block Krylov methods is often\noptimized by choosing a block size $1 \\ll b \\ll k$. We resolve this\ntheory-practice gap by proving that randomized block Krylov iteration produces\na $(1 + \\varepsilon)$-factor approximate rank-$k$ approximation using $\\tilde\nO(k/\\sqrt{\\varepsilon})$ matrix-vector products for any block size $1\\le b\\le\nk$. Our analysis relies on new bounds for the minimum singular value of a\nrandom block Krylov matrix, which may be of independent interest. Similar\nbounds are central to recent breakthroughs on faster algorithms for sparse\nlinear systems [Peng & Vempala, SODA 2021; Nie, STOC 2022].",
+    "published_date": "2025-08-08T17:50:01+00:00",
+    "source_platform": "arXiv"
+  },
+  {
+    "title": "WGAST: Weakly-Supervised Generative Network for Daily 10 m Land Surface Temperature Estimation via Spatio-Temporal Fusion",
+    "url": "http://arxiv.org/abs/2508.06485v1",
+    "content": "Urbanization, climate change, and agricultural stress are increasing the\ndemand for precise and timely environmental monitoring. Land Surface\nTemperature (LST) is a key variable in this context and is retrieved from\nremote sensing satellites. However, these systems face a trade-off between\nspatial and temporal resolution. While spatio-temporal fusion methods offer\npromising solutions, few have addressed the estimation of daily LST at 10 m\nresolution. In this study, we present WGAST, a Weakly-Supervised Generative\nNetwork for Daily 10 m LST Estimation via Spatio-Temporal Fusion of Terra\nMODIS, Landsat 8, and Sentinel-2. WGAST is the first end-to-end deep learning\nframework designed for this task. It adopts a conditional generative\nadversarial architecture, with a generator composed of four stages: feature\nextraction, fusion, LST reconstruction, and noise suppression. The first stage\nemploys a set of encoders to extract multi-level latent representations from\nthe inputs, which are then fused in the second stage using cosine similarity,\nnormalization, and temporal attention mechanisms. The third stage decodes the\nfused features into high-resolution LST, followed by a Gaussian filter to\nsuppress high-frequency noise. Training follows a weakly supervised strategy\nbased on physical averaging principles and reinforced by a PatchGAN\ndiscriminator. Experiments demonstrate that WGAST outperforms existing methods\nin both quantitative and qualitative evaluations. Compared to the\nbest-performing baseline, on average, WGAST reduces RMSE by 17.18% and improves\nSSIM by 11.00%. Furthermore, WGAST is robust to cloud-induced LST and\neffectively captures fine-scale thermal patterns, as validated against 33\nground-based sensors. The code is available at\nhttps://github.com/Sofianebouaziz1/WGAST.git.",
+    "published_date": "2025-08-08T17:49:46+00:00",
+    "source_platform": "arXiv"
+  },
+  {
+    "title": "Non-programmers Assessing AI-Generated Code: A Case Study of Business Users Analyzing Data",
+    "url": "http://arxiv.org/abs/2508.06484v1",
+    "content": "Non-technical end-users increasingly rely on AI code generation to perform\ntechnical tasks like data analysis. However, large language models (LLMs)\nremain unreliable, and it is unclear whether end-users can effectively identify\nmodel errors $\\unicode{x2014}$ especially in realistic and domain-specific\nscenarios. We surveyed marketing and sales professionals to assess their\nability to critically evaluate LLM-generated analyses of marketing data.\nParticipants were shown natural language explanations of the AI's code,\nrepeatedly informed the AI often makes mistakes, and explicitly prompted to\nidentify them. Yet, participants frequently failed to detect critical flaws\nthat could compromise decision-making, many of which required no technical\nknowledge to recognize. To investigate why, we reformatted AI responses into\nclearly delineated steps and provided alternative approaches for each decision\nto support critical evaluation. While these changes had a positive effect,\nparticipants often struggled to reason through the AI's steps and alternatives.\nOur findings suggest that business professionals cannot reliably verify\nAI-generated data analyses on their own and explore reasons why to inform\nfuture designs. As non-programmers adopt code-generating AI for technical\ntasks, unreliable AI and insufficient human oversight poses risks of unsafe or\nlow-quality decisions.",
+    "published_date": "2025-08-08T17:49:22+00:00",
+    "source_platform": "arXiv"
+  },
+  {
+    "title": "Post-training for Efficient Communication via Convention Formation",
+    "url": "http://arxiv.org/abs/2508.06482v1",
+    "content": "Humans communicate with increasing efficiency in multi-turn interactions, by\nadapting their language and forming ad-hoc conventions. In contrast, prior work\nshows that LLMs do not naturally show this behavior. We develop a post-training\nprocess to develop this ability through targeted fine-tuning on heuristically\nidentified demonstrations of convention formation. We evaluate with two new\nbenchmarks focused on this capability. First, we design a focused,\ncognitively-motivated interaction benchmark that consistently elicits strong\nconvention formation trends in humans. Second, we create a new\ndocument-grounded reference completion task that reflects in-the-wild\nconvention formation behavior. Our studies show significantly improved\nconvention formation abilities in post-trained LLMs across the two evaluation\nmethods.",
+    "published_date": "2025-08-08T17:42:16+00:00",
+    "source_platform": "arXiv"
+  },
+  {
+    "title": "The Problem of Atypicality in LLM-Powered Psychiatry",
+    "url": "http://arxiv.org/abs/2508.06479v1",
+    "content": "Large language models (LLMs) are increasingly proposed as scalable solutions\nto the global mental health crisis. But their deployment in psychiatric\ncontexts raises a distinctive ethical concern: the problem of atypicality.\nBecause LLMs generate outputs based on population-level statistical\nregularities, their responses -- while typically appropriate for general users\n-- may be dangerously inappropriate when interpreted by psychiatric patients,\nwho often exhibit atypical cognitive or interpretive patterns. We argue that\nstandard mitigation strategies, such as prompt engineering or fine-tuning, are\ninsufficient to resolve this structural risk. Instead, we propose dynamic\ncontextual certification (DCC): a staged, reversible and context-sensitive\nframework for deploying LLMs in psychiatry, inspired by clinical translation\nand dynamic safety models from artificial intelligence governance. DCC reframes\nchatbot deployment as an ongoing epistemic and ethical process that prioritises\ninterpretive safety over static performance benchmarks. Atypicality, we argue,\ncannot be eliminated -- but it can, and must, be proactively managed.",
+    "published_date": "2025-08-08T17:36:42+00:00",
+    "source_platform": "arXiv"
+  },
+  {
+    "title": "polarsource /\n\n      polar",
+    "url": "https://github.com/polarsource/polar",
+    "content": "Language: Python. An open source engine for your digital products. Sell SaaS and digital products in minutes.",
+    "published_date": "2025-08-11T04:36:18.224274+00:00",
+    "source_platform": "GitHub Trending (python)"
+  },
+  {
+    "title": "hesreallyhim /\n\n      awesome-claude-code",
+    "url": "https://github.com/hesreallyhim/awesome-claude-code",
+    "content": "Language: Python. A curated list of awesome commands, files, and workflows for Claude Code",
+    "published_date": "2025-08-11T04:36:18.224338+00:00",
+    "source_platform": "GitHub Trending (python)"
+  },
+  {
+    "title": "lfnovo /\n\n      open-notebook",
+    "url": "https://github.com/lfnovo/open-notebook",
+    "content": "Language: Python. An Open Source implementation of Notebook LM with more flexibility and features",
+    "published_date": "2025-08-11T04:36:18.224419+00:00",
+    "source_platform": "GitHub Trending (python)"
+  },
+  {
+    "title": "sinaptik-ai /\n\n      pandas-ai",
+    "url": "https://github.com/sinaptik-ai/pandas-ai",
+    "content": "Language: Python. Chat with your database or your datalake (SQL, CSV, parquet). PandasAI makes data analysis conversational using LLMs and RAG.",
+    "published_date": "2025-08-11T04:36:18.224469+00:00",
+    "source_platform": "GitHub Trending (python)"
+  },
+  {
+    "title": "DevilXD /\n\n      TwitchDropsMiner",
+    "url": "https://github.com/DevilXD/TwitchDropsMiner",
+    "content": "Language: Python. An app that allows you to AFK mine timed Twitch drops, with automatic drop claiming and channel switching.",
+    "published_date": "2025-08-11T04:36:18.224535+00:00",
+    "source_platform": "GitHub Trending (python)"
+  },
+  {
+    "title": "tadata-org /\n\n      fastapi_mcp",
+    "url": "https://github.com/tadata-org/fastapi_mcp",
+    "content": "Language: Python. Expose your FastAPI endpoints as Model Context Protocol (MCP) tools, with Auth!",
+    "published_date": "2025-08-11T04:36:18.224586+00:00",
+    "source_platform": "GitHub Trending (python)"
+  },
+  {
+    "title": "ucbepic /\n\n      docetl",
+    "url": "https://github.com/ucbepic/docetl",
+    "content": "Language: Python. A system for agentic LLM-powered data processing and ETL",
+    "published_date": "2025-08-11T04:36:18.224635+00:00",
+    "source_platform": "GitHub Trending (python)"
+  },
+  {
+    "title": "omkarcloud /\n\n      botasaurus",
+    "url": "https://github.com/omkarcloud/botasaurus",
+    "content": "Language: Python. The All in One Framework to Build Undefeatable Scrapers",
+    "published_date": "2025-08-11T04:36:18.224700+00:00",
+    "source_platform": "GitHub Trending (python)"
+  },
+  {
+    "title": "yt-dlp /\n\n      yt-dlp",
+    "url": "https://github.com/yt-dlp/yt-dlp",
+    "content": "Language: Python. A feature-rich command-line audio/video downloader",
+    "published_date": "2025-08-11T04:36:18.224750+00:00",
+    "source_platform": "GitHub Trending (python)"
+  },
+  {
+    "title": "openai /\n\n      openai-python",
+    "url": "https://github.com/openai/openai-python",
+    "content": "Language: Python. The official Python library for the OpenAI API",
+    "published_date": "2025-08-11T04:36:18.224800+00:00",
+    "source_platform": "GitHub Trending (python)"
+  },
+  {
+    "title": "PacktPublishing /\n\n      LLM-Engineers-Handbook",
+    "url": "https://github.com/PacktPublishing/LLM-Engineers-Handbook",
+    "content": "Language: Python. The LLM's practical guide: From the fundamentals to deploying advanced LLM and RAG apps to AWS using LLMOps best practices",
+    "published_date": "2025-08-11T04:36:18.224850+00:00",
+    "source_platform": "GitHub Trending (python)"
+  },
+  {
+    "title": "commaai /\n\n      openpilot",
+    "url": "https://github.com/commaai/openpilot",
+    "content": "Language: Python. openpilot is an operating system for robotics. Currently, it upgrades the driver assistance system on 300+ supported cars.",
+    "published_date": "2025-08-11T04:36:18.224899+00:00",
+    "source_platform": "GitHub Trending (python)"
+  },
+  {
+    "title": "nottelabs /\n\n      notte",
+    "url": "https://github.com/nottelabs/notte",
+    "content": "Language: Python. 🔥 Reliable Browser AI agents (YC S25)",
+    "published_date": "2025-08-11T04:36:18.224960+00:00",
+    "source_platform": "GitHub Trending (python)"
+  },
+  {
+    "title": "funstory-ai /\n\n      BabelDOC",
+    "url": "https://github.com/funstory-ai/BabelDOC",
+    "content": "Language: Python. Yet Another Document Translator",
+    "published_date": "2025-08-11T04:36:18.225009+00:00",
+    "source_platform": "GitHub Trending (python)"
+  },
+  {
+    "title": "modelscope /\n\n      DiffSynth-Studio",
+    "url": "https://github.com/modelscope/DiffSynth-Studio",
+    "content": "Language: Python. Enjoy the magic of Diffusion models!",
+    "published_date": "2025-08-11T04:36:18.225059+00:00",
+    "source_platform": "GitHub Trending (python)"
+  },
+  {
+    "title": "exo-explore /\n\n      exo",
+    "url": "https://github.com/exo-explore/exo",
+    "content": "Language: Python. Run your own AI cluster at home with everyday devices 📱💻 🖥️⌚",
+    "published_date": "2025-08-11T04:36:18.225108+00:00",
+    "source_platform": "GitHub Trending (python)"
+  },
+  {
+    "title": "unslothai /\n\n      unsloth",
+    "url": "https://github.com/unslothai/unsloth",
+    "content": "Language: Python. Fine-tuning & Reinforcement Learning for LLMs. 🦥 Train OpenAI gpt-oss, Qwen3, Llama 4, DeepSeek-R1, Gemma 3, TTS 2x faster with 70% less VRAM.",
+    "published_date": "2025-08-11T04:36:18.225173+00:00",
+    "source_platform": "GitHub Trending (python)"
+  },
+  {
+    "title": "The Download: GPT-5 is here, and Intel’s CEO drama",
+    "url": "https://www.technologyreview.com/2025/08/08/1121330/the-download-gpt-5-is-here-and-intels-ceo-drama/",
+    "content": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. GPT-5 is here. Now what? At long last, OpenAI has released GPT-5. The new system abandons the distinction between OpenAI’s flagship models and its o series of reasoning models, automatically routing user queries&#8230;",
+    "published_date": "2025-08-08T06:40:00+00:00",
+    "source_platform": "RSS - MIT Technology Review"
+  },
+  {
+    "title": "GPT-5 is here. Now what?",
+    "url": "https://www.technologyreview.com/2025/08/07/1121308/gpt-5-is-here-now-what/",
+    "content": "At long last, OpenAI has released GPT-5. The new system abandons the distinction between OpenAI’s flagship models and its o series of reasoning models, automatically routing user queries to a fast nonreasoning model or a slower reasoning version. It is now available to everyone through the ChatGPT web interface—though nonpaying users may need to wait&#8230;",
+    "published_date": "2025-08-07T11:30:00+00:00",
+    "source_platform": "RSS - MIT Technology Review"
+  },
+  {
+    "title": "The Download: how AI is improving itself, and hidden greenhouse gases",
+    "url": "https://www.technologyreview.com/2025/08/07/1121303/the-download-how-ai-is-improving-itself-and-hidden-greenhouse-gases/",
+    "content": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. Five ways that AI is learning to improve itself Last week, Mark Zuckerberg declared that Meta aims to achieve smarter-than-human AI. He seems to have a recipe for achieving that goal, and the&#8230;",
+    "published_date": "2025-08-07T06:40:00+00:00",
+    "source_platform": "RSS - MIT Technology Review"
+  },
+  {
+    "title": "The greenhouse gases we’re not accounting for",
+    "url": "https://www.technologyreview.com/2025/08/07/1121188/the-greenhouse-gases-were-not-accounting-for/",
+    "content": "In the spring of 2021, climate scientists were stumped.&#160; The global economy was just emerging from the covid-19 lockdowns, but for some reason the levels of methane—a greenhouse gas emitted mainly through agriculture and fossil-fuel production—had soared in the atmosphere the previous year, rising at the fastest rate on record. Researchers around the world set&#8230;",
+    "published_date": "2025-08-07T03:30:00+00:00",
+    "source_platform": "RSS - MIT Technology Review"
+  },
+  {
+    "title": "Five ways that AI is learning to improve itself",
+    "url": "https://www.technologyreview.com/2025/08/06/1121193/five-ways-that-ai-is-learning-to-improve-itself/",
+    "content": "Last week, Mark Zuckerberg declared that Meta is aiming to achieve smarter-than-human AI. He seems to have a recipe for achieving that goal, and the first ingredient is human talent: Zuckerberg has reportedly tried to lure top researchers to Meta Superintelligence Labs with nine-figure offers. The second ingredient is AI itself.&#160; Zuckerberg recently said on&#8230;",
+    "published_date": "2025-08-06T09:44:12+00:00",
+    "source_platform": "RSS - MIT Technology Review"
+  },
+  {
+    "title": "The Download: OpenAI’s open-weight models, and the future of internet search",
+    "url": "https://www.technologyreview.com/2025/08/06/1121179/the-download-openais-open-weight-models-and-the-future-of-internet-search/",
+    "content": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. OpenAI has finally released open-weight language models The news: OpenAI has finally released its first open-weight large language models since 2019’s GPT-2. Unlike the models available through OpenAI’s web interface, these new open&#8230;",
+    "published_date": "2025-08-06T06:40:00+00:00",
+    "source_platform": "RSS - MIT Technology Review"
+  },
+  {
+    "title": "OpenAI has finally released open-weight language models",
+    "url": "https://www.technologyreview.com/2025/08/05/1121092/openai-has-finally-released-open-weight-language-models/",
+    "content": "OpenAI has finally released its first open-weight large language models since 2019’s GPT-2. These new “gpt-oss” models are available in two different sizes and score similarly to the company’s o3-mini and o4-mini models on several benchmarks. Unlike the models available through OpenAI’s web interface, these new open models can be freely downloaded, run, and even&#8230;",
+    "published_date": "2025-08-05T11:30:00+00:00",
+    "source_platform": "RSS - MIT Technology Review"
+  },
+  {
+    "title": "The Download: AI agent infrastructure, and OpenAI’s ambitions",
+    "url": "https://www.technologyreview.com/2025/08/05/1121056/the-download-ai-agent-infrastructure-openai-ambitions/",
+    "content": "This is today&#8217;s edition of&#160;The Download,&#160;our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. These protocols will help AI agents navigate our messy lives A growing number of companies are launching AI agents that can do things on your behalf—actions like sending an email, making a document,&#8230;",
+    "published_date": "2025-08-05T06:30:00+00:00",
+    "source_platform": "RSS - MIT Technology Review"
+  },
+  {
+    "title": "A glimpse into OpenAI’s largest ambitions",
+    "url": "https://www.technologyreview.com/2025/08/05/1121052/a-glimpse-into-openais-largest-ambitions/",
+    "content": "OpenAI has given itself a dual mandate. On the one hand, it’s a tech giant rooted in products, including of course ChatGPT, which people around the world reportedly send 2.5 billion requests to each day. But its original mission is to serve as a research lab that will not only create “artificial general intelligence” but&#8230;",
+    "published_date": "2025-08-05T03:30:00+00:00",
+    "source_platform": "RSS - MIT Technology Review"
+  },
+  {
+    "title": "These protocols will help AI agents navigate our messy lives",
+    "url": "https://www.technologyreview.com/2025/08/04/1120996/protocols-help-agents-navigate-lives-mcp-a2a/",
+    "content": "A growing number of companies are launching AI agents that can do things on your behalf—actions like sending an email, making a document, or editing a database. Initial reviews for these agents have been mixed at best, though, because they struggle to interact with all the different components of our digital lives. Part of the&#8230;",
+    "published_date": "2025-08-04T09:30:13+00:00",
+    "source_platform": "RSS - MIT Technology Review"
+  }
+]

@@ -1,6 +1,6 @@
 import requests
 from datetime import datetime, timezone
-from utils import get_env_variable, standardize_article
+from .utils import get_env_variable, standardize_article
 import logging
 
 logger = logging.getLogger(__name__)

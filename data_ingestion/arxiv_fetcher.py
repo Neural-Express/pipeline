@@ -1,5 +1,5 @@
 import arxiv
-from utils import standardize_article
+from .utils import standardize_article
 from datetime import datetime
 import logging
 

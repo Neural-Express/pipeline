@@ -86,8 +86,15 @@ print(f"[SAVE] Wrote {len(summaries)} summaries (with images) to '{OUTPUT_PATH}'
 
 
 
-from pipeline.contracts.checks import load_json_array, ensure_article_fields, ensure_min_count, write_json
-
+try:
+    from contracts.checks import load_json_array, ensure_article_fields, ensure_min_count, write_json
+except ImportError:
+    # Fallback if run as a script: add project root to sys.path then retry
+    import os, sys
+    sys.path.append(os.path.dirname(__file__))                 # /.../pipeline/summarization
+    sys.path.append(os.path.dirname(os.path.dirname(__file__)))# /.../pipeline
+    from contracts.checks import load_json_array, ensure_article_fields, ensure_min_count, write_json
+    
 OUT = "summarization/summaries.json"
 
 # ... your summarization code that writes OUT ...
